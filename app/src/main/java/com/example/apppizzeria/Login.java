@@ -13,14 +13,14 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         Button btnIniciarSesion = findViewById(R.id.btnIniciarSesion);
         EditText txtEmail = (EditText) findViewById(R.id.txtEmail);
         EditText txtPassword = (EditText) findViewById(R.id.txtPassword);
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (txtEmail.getText() != null && txtPassword.getText() != null) {
+                if (txtEmail.toString() != null && txtPassword.toString() != null) {
                     Intent intent = new Intent(getApplicationContext(), Principal.class);
                     startActivity(intent);
                 }
